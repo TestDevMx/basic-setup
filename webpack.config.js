@@ -13,9 +13,13 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/
       },
     ],
   },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ]
+},
   devServer: {
     static: './',
   },
